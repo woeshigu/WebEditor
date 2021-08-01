@@ -1,0 +1,579 @@
+body
+{
+	margin: 0;
+}
+
+*, *:after, *:before
+{
+	box-sizing: border-box;
+}
+
+/* Main styles  */
+.main
+{
+	position: relative;
+}
+
+.container:hover
+{
+	border:  1px dotted black;
+}
+
+.container *:hover
+{
+	border:  1px dotted black;
+}
+/* End main styles */
+
+/* Tools styles  */
+.tools-group
+{
+	border: none;
+	padding: 5px 10px;
+	background-color: #FFDB94;
+	font-weight: 700;
+	color: rgb(0, 0, 50);
+	transition: background .2s linear;
+	box-shadow: 1px 1px 2px black;
+}
+
+.tools-group:hover
+{
+	background-color: #FFBE3D;
+}
+
+.tools
+{
+	width: 20%;
+	height: 95vh;
+	background: rgb(82,219,222);
+	background: linear-gradient(180deg, rgba(82,219,222,1) 0%, rgba(93,227,255,1) 100%);
+	position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+.tools-btn
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tools-group
+{
+	width: 70%;
+	text-align: center;
+	margin: 10px 0px;
+}
+
+.hide-tools
+{
+	position: fixed;
+	bottom: 10px;
+	left: 5px;
+	border: none;
+	padding: 5px 10px;
+	background-color: #FF9640;
+	font-weight: 700;
+	color: rgb(0, 0, 50);
+	transition: background .2s linear;
+	box-shadow: 1px 1px 2px black;
+}
+
+.hide-tools:hover
+{
+	background-color: #BF8230;
+}
+/* End tools styles */
+
+/* Settings styles */
+.settings-field
+{
+	margin: 10px auto;
+	width: 70%;
+	background-color: rgba(255, 255, 255, 0.7);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.settings-item
+{
+	margin: 10px 0;
+}
+
+.btn-tools
+{
+	border: none;
+	padding: 5px 10px;
+	font-weight: 700;
+	color: rgb(0, 0, 50);
+	transition: background .2s linear;
+	box-shadow: 1px 1px 2px black;
+}
+
+.close-settings
+{
+	background-color: #FF5B3D;
+}
+
+.close-settings:hover
+{
+	background-color: #BF6352;
+}
+
+.save-settings
+{
+	background-color: #6DFF9F;
+}
+
+.save-settings:hover
+{
+	background-color: #52BF77;
+}
+
+.buttons-settings
+{
+	display: none;
+	margin: 20px 0;
+}
+/* End settings styles */
+
+/* Bg-group styles */
+.bg-color
+{
+	display: none;
+}
+
+.color-preview
+{
+	width: 25px;
+	height: 25px;
+	border: 1px solid rgba(0, 0, 0, .7);
+	border-radius: 50%;
+}
+
+.color-picker
+{
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+.alpha-input
+{
+	background-color: rgba(255, 255, 255, .5);
+	width: 3.6em;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.alpha-block
+{
+	position: relative;
+}
+
+.alpha-block::after
+{
+	position: absolute;
+	top: 20px;
+	left: 0;
+	content: "Opacity";
+}
+/* End bg-group styles */
+textarea
+{
+	resize: vertical;
+}
+
+.text
+{
+	display: none;
+	flex-direction: column;
+	align-items: center;
+}
+
+.text-blocks
+{
+	display: none;
+}
+
+.text-block
+{
+	background-color: white;
+	padding: 10px 40px;
+	margin: 10px 0;
+}
+/* Text group styles */
+
+/* End text group styles */
+
+/* Dnd styles */
+.dnd-field
+{
+	margin: 10px auto;
+	width: 70%;
+	background-color: rgba(255, 255, 255, 0.7);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.dnd-area
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.dnd-item
+{
+	cursor: move;
+}
+
+.buttons-dnd
+{
+	display: none;
+	margin: 20px 0;
+}
+
+.close-dnd
+{
+	background-color: #FF5B3D;
+}
+
+.close-dnd:hover
+{
+	background-color: #BF6352;
+}
+/* End dnd styles */
+
+/* Container group styles */
+.container-blocks
+{
+	display: none;
+}
+
+.column
+{
+	margin: 10px 0;
+	width: 6em;
+	height: 4em;
+	background-color: rgb(255, 255, 255);
+	border: 1px dotted black;
+}
+
+.column .col-item
+{
+	width: 100%;
+	height: 100%;
+	border: 1px dotted black;
+}
+
+.col-items
+{
+	width: 100%;
+	height: 100%;
+	display: flex;
+}
+/* End container group styles */
+
+/* Working area styles */
+.working-area
+{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 80%;
+}
+
+.container
+{
+	margin: 0 auto;
+	max-width: 80%;
+	height: 250px;
+}
+
+.wa-element .col-item
+{
+	width: 100%;
+	height: 100%;
+}
+
+.container .col-1
+{
+	margin: 0 auto;
+	width: 70%;
+	height: 200px;
+}
+
+.container .col-2
+{
+	margin: 0 auto;
+	width: 70%;
+	height: 200px;
+}
+
+.container .col-3
+{
+	margin: 0 auto;
+	width: 70%;
+	height: 200px;
+}
+
+.container .col-4
+{
+	margin: 0 auto;
+	width: 70%;
+	height: 200px;
+}
+
+.container .col-5
+{
+	margin: 0 auto;
+	width: 70%;
+	height: 200px;
+}
+
+.container .col-6
+{
+	margin: 0 auto;
+	width: 70%;
+	height: 200px;
+}
+/* End working area styles */
+
+/* Profile styles */
+.top-panel
+{
+	position: fixed;
+	top: 0;
+	left: 0;
+	height: 5vh;
+	width: 100%;
+	background: rgb(91,236,234);
+	background: linear-gradient(180deg, rgba(91,236,234,1) 0%, rgba(72,235,247,1) 100%);
+}
+
+.prof-btn
+{
+	margin: 7px 10px;
+	border: 3px solid black;
+	border-radius: 5px;
+	font-weight: 700;
+	transition: background .1s linear;
+}
+
+.prof-btn-div
+{
+	display: flex;
+}
+
+.log-in
+{
+	border-color: green;
+	background-color: rgba(255, 255, 255, 0.6);
+	color: green;
+}
+
+.register
+{
+	border-color: orange;
+	background-color: rgba(100, 255, 255, 0.6);
+	color: orange;
+}
+
+.prof-btn:hover
+{
+	box-shadow: none;
+	text-shadow: none;
+}
+
+.log-in:hover
+{
+	color: white;
+	background-color: green;
+}
+
+.register:hover
+{
+	color: rgb(100, 100, 100);
+	background-color: orange;
+}
+
+.log-out
+{
+	border-color: red;
+	color: red;
+	background-color: rgba(255, 255, 255, .6);
+	display: none;
+}
+
+.log-out:hover
+{
+	color: white;
+	background-color: red;
+}
+
+.prof-name
+{
+	position: fixed;
+	top: -15px;
+	right: 10px;
+}
+
+.projects-field
+{
+	position: fixed;
+	top: 10px;
+	left: 40%;
+}
+
+.project-props
+{
+	background-color: rgba(101,246,204,.7);
+	padding: 10px 5px;
+	margin: 10px 0;
+}
+
+.project-name
+{
+	background-color: rgba(0, 0, 0, 0);
+	border: 3px solid black;
+	font-weight: 700;
+	color: rgb(0, 0, 200);
+	border-radius: 5px;
+	border-color: rgb(0, 0, 200);
+	transition: background, color .2s linear;
+}
+
+.project-name:hover
+{
+	background-color: rgb(0, 0, 200);
+	color: white;
+}
+
+.project-props
+{
+	display: none;
+}
+/* End profile styles */
+
+/* Modal styles */
+.modal-window
+{
+	padding-top: 50px;
+	width: 100%;
+	position: fixed;
+	height: 100vh;
+	background-color: rgba(0, 0, 0, .5);
+	z-index: 99999;
+	display: none;
+	opacity: 0;
+}
+
+.modal-window h2
+{
+	text-transform: uppercase;
+	text-align: center;
+	font-style: italic;
+}
+
+.log-in-form
+{
+	padding: 10px 20px;
+	background-color: white;
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+.form-inner
+{
+	display: flex;
+	justify-content: center;
+}
+
+.labels 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px 0;
+}
+
+.inputs 
+{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 15px 0;
+}
+
+.labels > label
+{
+	margin-top: 10px;
+	padding: 5px 10px;
+}
+
+.inputs > input
+{
+	margin-top: 10px;
+	padding: 5px 10px;
+	border: 1px solid black;
+	border-radius: 0;
+}
+
+.mismatch::after
+{
+	content: "Password mismatch!";
+	color: red;
+}
+
+.emptypas::after
+{
+	content: "Password is empty!";
+	color: red;
+}
+
+.buttons
+{
+	display: flex;
+	justify-content: space-around;
+}
+
+.buttons > button
+{
+	border: 3px solid;
+	border-radius: 5px;
+	padding: 2px 10px;
+	transition: background .2s linear;
+}
+
+.buttons > .send-data
+{
+	border-color: green;
+	color: green;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.buttons > .close
+{
+	border-color: red;
+	color: red;
+	background-color: rgba(0, 0, 0, 0);
+}
+
+.buttons > .send-data:hover
+{
+	background-color: green;
+	color: white;
+}
+
+.buttons > .close:hover
+{
+	background-color: red;
+	color: white;
+}
+/* End modal styles */
